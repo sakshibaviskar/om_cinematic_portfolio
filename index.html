@@ -16,6 +16,7 @@
 <meta name="theme-color" content="#000000">
 
 <link rel="canonical" href="https://omcinematic.vercel.app/">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 <!-- Google Search Console -->
 <meta name="google-site-verification" content="It8sUQrI1Agcollrzr0tqKdUHTJa6VBb3yxJW5LdqjI">
@@ -134,10 +135,18 @@
 
   /* ---------- NAV ---------- */
   nav{
-    position:fixed;top:0;left:0;width:100%;z-index:500;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:28px 6vw;mix-blend-mode:difference;
-    opacity:0;transition:opacity 1s ease;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:500;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 6vw;
+    mix-blend-mode:difference;
+    opacity:0;
+    transition:opacity 1s ease;
   }
   nav.show{opacity:1;}
   .logo{
@@ -154,11 +163,20 @@
 
   /* ---------- HERO ---------- */
   .hero{
-    height:100vh;position:relative;display:flex;flex-direction:column;
-    align-items:center;justify-content:center;text-align:center;
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    padding:75px 6vw 55px;
+
     background:
       radial-gradient(ellipse at 50% 20%, rgba(212,175,55,.08), transparent 55%),
       linear-gradient(180deg,#000 0%, #050505 60%, #000 100%);
+
     overflow:hidden;
   }
   .hero::before{
@@ -173,18 +191,18 @@
   }
   .hero h1{
     font-family:'Bebas Neue',sans-serif;
-    font-size:clamp(46px,8vw,118px);
+    font-size:clamp(46px,7vw,92px);
     line-height:.95;letter-spacing:.01em;
-    margin:18px 0 22px;
+    margin:12px 0 16px;
     max-width:14ch;
     opacity:0;
   }
   .hero h1 em{font-style:normal;color:var(--gold);}
   .hero p.sub{
     color:var(--gray);font-size:15px;letter-spacing:.08em;
-    max-width:520px;line-height:1.9;opacity:0;
+    max-width:650px;;line-height:1.9;opacity:0;
   }
-  .hero-btns{display:flex;gap:18px;margin-top:46px;flex-wrap:wrap;justify-content:center;opacity:0;}
+  .hero-btns{display:flex;gap:18px;margin-top:34px;flex-wrap:wrap;justify-content:center;opacity:0;}
   .btn{
     position:relative;padding:16px 34px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;
     border:1px solid rgba(255,255,255,.25);color:var(--white);background:transparent;
@@ -321,16 +339,91 @@
   .test-role{font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin-top:4px;}
 
   /* ---------- CONTACT ---------- */
-  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
-  @media(max-width:900px){.contact-wrap{grid-template-columns:1fr;}}
-  .contact-links{display:flex;flex-direction:column;gap:0;margin-top:30px;}
-  .clink{
-    display:flex;justify-content:space-between;align-items:center;padding:20px 0;
-    border-bottom:1px solid rgba(255,255,255,.1);text-decoration:none;color:var(--white);
+  .contact-wrap{
+  max-width:950px;
+  margin:auto;
+  text-align:center;
   }
-  .clink span.l{font-size:11px;letter-spacing:.18em;color:var(--gray);text-transform:uppercase;}
-  .clink span.v{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.03em;}
-  .clink:hover span.v{color:var(--gold);}
+
+  .contact-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:55px;
+  }
+
+  .contact-card{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:24px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  text-decoration:none;
+  color:#fff;
+  transition:.35s;
+  }
+
+  .contact-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  background:rgba(212,175,55,.06);
+  }
+
+  .contact-icon{
+  font-size:34px;
+  width:60px;
+  text-align:center;
+  }
+
+  .contact-text{
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+  }
+
+  .contact-text small{
+  color:var(--gray);
+  font-size:12px;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  }
+
+  .contact-text span{
+  margin-top:4px;
+  font-size:20px;
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:.03em;
+  }
+
+  .instagram{
+      color:#E1306C;
+  }
+
+  .whatsapp{
+      color:#25D366;
+  }
+
+  .call{
+      color:#4DA3FF;
+  }
+
+  .email{
+      color:#FFB84D;
+  }
+
+  @media(max-width:768px){
+
+  .contact-grid{
+  grid-template-columns:1fr;
+  }
+
+  .contact-card{
+  padding:20px;
+  }
+
+  }
   form{display:flex;flex-direction:column;gap:26px;}
   .field{position:relative;}
   .field input,.field textarea{
@@ -369,7 +462,6 @@
 }
 </script>
 
-</head>
 </head>
 <body>
 
@@ -505,21 +597,70 @@
 
 <section id="contact">
   <div class="contact-wrap">
-    <div>
-      <span class="label reveal">Get In Touch</span>
-      <h2 class="sec-title reveal">Let's create something cinematic.</h2>
-      <div class="contact-links reveal">
-        <a class="clink" href="https://www.instagram.com/om_cinematic2007" target="_blank"><span class="l">Instagram</span><span class="v">@om_cinematic2007</span></a>
-        <a class="clink"  href="https://wa.me/919370770356?text=Hi%20OM%20Cinematic!%20I%20want%20to%20book%20a%20photoshoot." target="_blank" rel="noopener noreferrer"><span class="l">WhatsApp</span><span class="v">Message Now</span></a>
-        <a class="clink" href="mailto:ombavisar600@gmail.com"><span class="l">Email</span><span class="v">ombavisar600@gmail.com</span></a>
-      </div>
+
+    <span class="label reveal">Get In Touch</span>
+
+    <h2 class="sec-title reveal">
+      Let's Create Something Cinematic.
+    </h2>
+
+    <div class="contact-grid reveal">
+
+      <!-- Instagram -->
+      <a class="contact-card" href="https://www.instagram.com/om_cinematic2007" target="_blank">
+        <div class="contact-icon instagram">
+          <i class="fab fa-instagram"></i>
+        </div>
+
+        <div class="contact-text">
+          <small>Instagram</small>
+          <span>@om_cinematic2007</span>
+        </div>
+      </a>
+
+      <!-- WhatsApp -->
+      <a class="contact-card"
+         href="https://wa.me/919370770356?text=Hi%20OM%20Cinematic!%20I%20visited%20your%20website%20and%20would%20like%20to%20book%20a%20photoshoot."
+         target="_blank">
+
+        <div class="contact-icon whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <div class="contact-text">
+          <small>WhatsApp</small>
+          <span>Message Now</span>
+        </div>
+      </a>
+
+      <!-- Call -->
+      <a class="contact-card" href="tel:+919370770356">
+
+        <div class="contact-icon call">
+          <i class="fas fa-phone"></i>
+        </div>
+
+        <div class="contact-text">
+          <small>Call</small>
+          <span>+91 93707 70356</span>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <a class="contact-card" href="mailto:ombavisar600@gmail.com">
+
+        <div class="contact-icon email">
+          <i class="fas fa-envelope"></i>
+        </div>
+
+        <div class="contact-text">
+          <small>Email</small>
+          <span>ombavisar600@gmail.com</span>
+        </div>
+      </a>
+
     </div>
-    <form class="reveal" onsubmit="event.preventDefault(); alert('Thanks!');">
-      <div class="field"><input type="text" required><label>Your Name</label></div>
-      <div class="field"><input type="email" required><label>Email Address</label></div>
-      <div class="field"><textarea rows="4" required></textarea><label>Tell me about your project</label></div>
-      <button class="btn solid" type="submit" style="align-self:flex-start;"><span>Send Message</span></button>
-    </form>
+
   </div>
 </section>
 
