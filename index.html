@@ -312,6 +312,24 @@
   .cat-card .cname{
     position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.05em;
   }
+  .cat-card .cta{
+    position:absolute;
+    left:20px;
+    top:38px;
+    z-index:2;
+    font-family:'Orbitron',sans-serif;
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    opacity:.9;
+    text-align:left;
+    transition:transform .35s ease, opacity .35s ease;
+  }
+  .cat-card:hover .cta{
+    transform:translateX(6px);
+    opacity:1;
+  }
   .cat-card .cidx{
     position:absolute;top:18px;right:20px;z-index:2;font-family:'Orbitron',sans-serif;font-size:11px;color:var(--gold);
   }
@@ -564,12 +582,12 @@
   <span class="label reveal">Selected Work</span>
   <h2 class="sec-title reveal">Portfolio Categories</h2>
   <div class="cat-grid reveal">
-    <a href="wedding.html" class="cat-card"><img src="wedding.jpg.jpeg" loading="lazy" decoding="async" alt="Wedding portfolio thumbnail"><span class="cidx">01</span><span class="cname">Wedding</span></a>
-    <a href="automotive.html" class="cat-card"><img src="car.jpg.jpeg" loading="lazy" decoding="async" alt="Automotive portfolio thumbnail"><span class="cidx">02</span><span class="cname">Automotive</span></a>
-    <a href="beauty.html" class="cat-card"><img src="beauty.jpeg" loading="lazy" decoding="async" alt="Beauty portfolio thumbnail"><span class="cidx">03</span><span class="cname">Beauty</span></a>
-    <a href="fitness.html" class="cat-card"><img src="fitness.jpeg" loading="lazy" decoding="async" alt="Fitness portfolio thumbnail"><span class="cidx">04</span><span class="cname">Fitness</span></a>
-    <a href="birthday.html" class="cat-card"><img src="birthday.jpeg" loading="lazy" decoding="async" alt="Birthday portfolio thumbnail"><span class="cidx">05</span><span class="cname">Birthday</span></a>
-    <a href="politics.html" class="cat-card"><img src="Policics.jpg.jpeg" loading="lazy" decoding="async" alt="Politics portfolio thumbnail"><span class="cidx">06</span><span class="cname">Politics</span></a>
+    <a href="wedding.html" class="cat-card"><img src="wedding.jpg.jpeg" loading="lazy" decoding="async" alt="Wedding portfolio thumbnail"><span class="cidx">01</span><span class="cta">Click Here</span><span class="cname">Wedding</span></a>
+    <a href="automotive.html" class="cat-card"><img src="car.jpg.jpeg" loading="lazy" decoding="async" alt="Automotive portfolio thumbnail"><span class="cidx">02</span><span class="cta">Click Here</span><span class="cname">Automotive</span></a>
+    <a href="beauty.html" class="cat-card"><img src="beauty.jpeg" loading="lazy" decoding="async" alt="Beauty portfolio thumbnail"><span class="cidx">03</span><span class="cta">Click Here</span><span class="cname">Beauty</span></a>
+    <a href="fitness.html" class="cat-card"><img src="fitness.jpeg" loading="lazy" decoding="async" alt="Fitness portfolio thumbnail"><span class="cidx">04</span><span class="cta">Click Here</span><span class="cname">Fitness</span></a>
+    <a href="birthday.html" class="cat-card"><img src="birthday.jpeg" loading="lazy" decoding="async" alt="Birthday portfolio thumbnail"><span class="cidx">05</span><span class="cta">Click Here</span><span class="cname">Birthday</span></a>
+    <a href="politics.html" class="cat-card"><img src="Policics.jpg.jpeg" loading="lazy" decoding="async" alt="Politics portfolio thumbnail"><span class="cidx">06</span><span class="cta">Click Here</span><span class="cname">Politics</span></a>
   </div>
 </section>
 
@@ -682,7 +700,7 @@
 
 <footer>
   <div>© 2026 OM_CINEMATIC. All Rights Reserved.</div>
-  <div>Crafted for <a href="https://www.instagram.com/om_cinematic2007" target="_blank">@om_cinematic2007</a></div>
+  <div>Crafted for <a href="https://www.instagram.com/bizz.nxt" target="_blank">@bizz.nxt</a></div>
 </footer>
 
 <script>
