@@ -144,9 +144,26 @@
     align-items:center;
     justify-content:space-between;
     padding:18px 6vw;
-    mix-blend-mode:difference;
     opacity:0;
-    transition:opacity 1s ease;
+    transition: background .35s ease, backdrop-filter .35s ease, padding .35s ease, box-shadow .35s ease, border-color .35s ease;
+  }
+  nav.scrolled{
+    background:rgba(5,5,5,.82);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(212,175,55,.18);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+
+    padding:14px 6vw;
+  }
+  nav.scrolled .navlinks a{
+    color:#fff;
+  }
+
+  nav.scrolled .navlinks a:hover{
+    color:var(--gold);
   }
   nav.show{opacity:1;}
   .logo{
@@ -699,8 +716,8 @@
 </section>
 
 <footer>
-  <div>© 2026 OM_CINEMATIC. All Rights Reserved.</div>
-  <div>Crafted for <a href="https://www.instagram.com/bizz.nxt" target="_blank">@bizz.nxt</a></div>
+  <div>© 2026 OM CINEMATIC. All Rights Reserved.</div>
+  <div>Crafted with ❤️ by <a href="https://www.instagram.com/bizz.nxt" target="_blank">@bizz.nxt</a></div>
 </footer>
 
 <script>
@@ -747,6 +764,15 @@ const obs=new IntersectionObserver((entries)=>{
   });
 },{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const nav = document.getElementById("mainNav");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 70) {
+        nav.classList.add("scrolled");
+    } else {
+        nav.classList.remove("scrolled");
+    }
+});
 </script>
 </body>
 </html>
